@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
-import './category_item.dart';
+import '../dummy_data.dart';
+import '../widgets/category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          
-          title: const Text(
-            'Connect Lavasa',
-          ),
-        ),
         body: GridView(
           padding: EdgeInsets.all(25),
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -23,6 +17,7 @@ class CategoriesScreen extends StatelessWidget {
           ),
           children: DUMMY_CATEGORIES
               .map((catData) => CategoryItem(
+                    catData.id,
                     catData.title,
                     catData.color,
                     catData.email,

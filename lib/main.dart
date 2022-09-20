@@ -1,6 +1,7 @@
+import 'package:connect_lavasa/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'categories_screen.dart';
+import './screens/categories_screen.dart';
+import './screens/category_contact_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,8 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Connect Lavasa',
       theme: ThemeData(
+        primaryColor: Colors.indigo,
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blueGrey)
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo)
             .copyWith(secondary: Colors.lightBlue),
         fontFamily: 'BebasNeuePro',
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -25,7 +27,10 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: CategoriesScreen(),
+      home: TabsScreen(),
+      routes: {
+        CategoryContact.routeName: (ctx) => CategoryContact(),
+      },
     );
   }
 }

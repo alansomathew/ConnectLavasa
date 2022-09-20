@@ -10,5 +10,5 @@ class Category {
       {required this.id,
       required this.title,
       required this.email,
-      this.color = Colors.blueAccent});
+      this.color = Colors.blueAccent, required String about});
 }

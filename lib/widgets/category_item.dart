@@ -1,23 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'category_contact_screen.dart';
+import 'package:connect_lavasa/screens/category_contact_screen.dart';
 
 class CategoryItem extends StatelessWidget {
+  final String id;
   final String title;
   final Color color;
   final String email;
 
-  CategoryItem(this.title, this.color, this.email);
+  CategoryItem(this.id, this.title, this.color, this.email);
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return CategoryContact();
-        },
-      ),
-    );
+    Navigator.of(ctx).pushNamed(CategoryContact.routeName,
+        arguments: {'id': id, 'title': title});
   }
 
   @override
@@ -30,7 +24,7 @@ class CategoryItem extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [color.withOpacity(0.7), color],
+            colors: [color.withOpacity(0.5), color],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
