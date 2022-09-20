@@ -1,9 +1,9 @@
-import 'package:connect_lavasa/screens/notice_screen.dart';
-import 'package:connect_lavasa/screens/other_screen.dart';
-import 'package:connect_lavasa/screens/timetable_screen.dart';
-
-import '../screens/categories_screen.dart';
 import 'package:flutter/material.dart';
+import '../screens/notice_screen.dart';
+import '../screens/other_screen.dart';
+import '../screens/timetable_screen.dart';
+import '../widgets/main_drawer.dart';
+import '../screens/categories_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -40,12 +40,15 @@ class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          _pages[_selectedPageIndex]['title'],
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(65),
+        child: AppBar(
+          title: Text(
+            _pages[_selectedPageIndex]['title'],
+          ),
         ),
       ),
-    
+      drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['pages'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
