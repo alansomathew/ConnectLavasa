@@ -6,9 +6,10 @@ class Category {
   final Color color;
   final String email;
 
-  const Category(
-      {required this.id,
-      required this.title,
-      required this.email,
-      this.color = Colors.blueAccent, required String about});
+  const Category({
+    required this.id,
+    required this.title,
+    required this.email,
+    this.color = Colors.blueAccent,
+  });
 }

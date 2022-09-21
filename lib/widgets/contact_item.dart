@@ -39,7 +39,7 @@ class ContactItem extends StatelessWidget {
                     borderRadius: const BorderRadius.all(
                       Radius.circular(10.0),
                     ),
-                    child: Image.network(
+                    child: Image.asset(
                       imageUrl,
                       height: 100,
                       width: 80,

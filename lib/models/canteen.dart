@@ -1,17 +1,15 @@
-class Contact {
+class Canteen {
   final String id;
-  final List<String> categories;
   final String name;
   final String imageUrl;
-  final String emaila;
+  final String location;
   final String contact;
 
-  const Contact({
+  Canteen({
     required this.id,
-    required this.categories,
     required this.name,
     required this.contact,
     required this.imageUrl,
-    required this.emaila,
+    required this.location,
   });
 }
