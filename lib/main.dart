@@ -4,6 +4,7 @@ import 'package:connect_lavasa/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 
 import './screens/category_contact_screen.dart';
+import 'screens/menu_details_screen.dart';
 import 'screens/restaurent_screen.dart';
 
 void main() {
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         CanteenScreen.routeName: (ctx) => CanteenScreen(),
         RestaurentScreen.routeName: (ctx) => RestaurentScreen(),
         OtherScreen.routeName: (ctx) => OtherScreen(),
+        MenuDetailsScreen.routeName: (ctx) => MenuDetailsScreen(),
       },
     );
   }

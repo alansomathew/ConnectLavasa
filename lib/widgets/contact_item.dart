@@ -6,12 +6,13 @@ class ContactItem extends StatelessWidget {
   final String imageUrl;
   final String emaila;
   final String contact;
-  ContactItem(
-      {required this.id,
-      required this.emaila,
-      required this.name,
-      required this.contact,
-      required this.imageUrl});
+  ContactItem({
+    required this.id,
+    required this.emaila,
+    required this.name,
+    required this.contact,
+    required this.imageUrl,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
