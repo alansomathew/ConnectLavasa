@@ -97,23 +97,23 @@ class MainDrawer extends StatelessWidget {
                     .pushReplacementNamed(CanteenScreen.routeName);
               },
             ),
-            ListTile(
-              leading: const Icon(
-                Icons.restaurant,
-                size: 26,
-              ),
-              title: const Text(
-                'Restaurant',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              onTap: () {
-                Navigator.of(context)
-                    .pushReplacementNamed(RestaurentScreen.routeName);
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(
+            //     Icons.restaurant,
+            //     size: 26,
+            //   ),
+            //   title: const Text(
+            //     'Restaurant',
+            //     style: TextStyle(
+            //       fontSize: 24,
+            //       fontWeight: FontWeight.bold,
+            //     ),
+            //   ),
+            //   onTap: () {
+            //     Navigator.of(context)
+            //         .pushReplacementNamed(RestaurentScreen.routeName);
+            //   },
+            // ),
             ListTile(
               leading: const Icon(
                 Icons.settings,

@@ -1,16 +1,14 @@
-import '../dummy_restuarent.dart';
 import 'package:flutter/material.dart';
-import '../widgets/restaurent_item.dart';
-// import '../widgets/main_drawer.dart';
+import '../dummy_canteen.dart';
 
-class RestaurentScreen extends StatelessWidget {
-  static const routeName = '/restaurant-screen';
+import '../widgets/canteen_item.dart';
 
+class CanteenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: DUMMY_RESTAURENT
-          .map((catData) => RestaurentItem(
+      children: DUMMY_CANTEEN
+          .map((catData) => CanteenItem(
                 id: catData.id,
                 name: catData.name,
                 imageUrl: catData.imageUrl,

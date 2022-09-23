@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MenuItemlist extends StatelessWidget {
+class ResMenuItemlist extends StatelessWidget {
   final String name;
   final String id;
   final String imageUrl;
   final String price;
-  MenuItemlist({
+  ResMenuItemlist({
     required this.id,
     required this.name,
     required this.price,

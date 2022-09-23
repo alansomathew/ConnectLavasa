@@ -1,10 +1,10 @@
-import '../widgets/menu_item.dart';
+import '../dummy_restuarent.dart';
 
-import '../dummy_canteen.dart';
-import '../widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
-class MenuDetailsScreen extends StatelessWidget {
+import '../widgets/res_menu_item.dart';
+
+class ResMenuDetailsScreen extends StatelessWidget {
   static const routeName = '/menu-screen';
 
   @override
@@ -16,7 +16,7 @@ class MenuDetailsScreen extends StatelessWidget {
     final String imageUrl = canteenItem['imageUrl'] as String;
     final String canteenName = canteenItem['name'] as String;
     // print(canteenName);
-    final selectedMenu = DUMMY_MENU.where((menu) {
+    final selectedMenu = DUMMY_RESMENU.where((menu) {
       return menu.canteen.contains(canteenId);
     }).toList();
 
@@ -82,7 +82,7 @@ class MenuDetailsScreen extends StatelessWidget {
           ),
           ListView.builder(
             itemBuilder: ((context, index) {
-              return MenuItemlist(
+              return ResMenuItemlist(
                 id: selectedMenu[index].id,
                 name: selectedMenu[index].name,
                 price: selectedMenu[index].price,

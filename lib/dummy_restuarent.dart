@@ -1,63 +1,63 @@
-import './models/canteen.dart';
-import './models/menu.dart';
+import 'models/res_menu.dart';
+import 'models/restaurent.dart';
 
-List<Canteen> DUMMY_CANTEEN = [
-  Canteen(
+List<Restaurent> DUMMY_RESTAURENT = [
+  Restaurent(
     id: 'canteen1',
-    name: 'cantten1',
+    name: 'Restaurent1',
     contact: '9447908235',
     imageUrl: 'assets/images/minimart.png',
-    location: 'Centeral Block',
+    location: 'Lavasa Market',
   ),
-  Canteen(
+  Restaurent(
     id: 'canteen2',
-    name: 'cantten2',
+    name: 'Restaurent2',
     contact: '9447908235',
     imageUrl: 'assets/images/minimart.png',
-    location: 'MBA Block',
+    location: 'promenade',
   ),
-  Canteen(
+  Restaurent(
     id: 'canteen3',
-    name: 'cantten3',
+    name: 'Restaurent3',
     contact: '9447908235',
     imageUrl: 'assets/images/minimart.png',
-    location: 'Centeral Block',
+    location: 'Lavasa Market',
   ),
-  Canteen(
+  Restaurent(
     id: 'canteen4',
-    name: 'cantten4',
+    name: 'Restaurent4',
     contact: '9447908235',
     imageUrl: 'assets/images/minimart.png',
-    location: 'MBA Block',
+    location: 'promenade',
   ),
 ];
 
-List<Menu> DUMMY_MENU =  [
-  Menu(
+List<ResMenu> DUMMY_RESMENU = const [
+  ResMenu(
     id: 'item1',
     canteen: ['canteen1', 'canteen2'],
     name: 'Idili',
     price: '40',
   ),
-  Menu(
+  ResMenu(
     id: 'item2',
     canteen: ['canteen4', 'canteen2'],
     name: 'Dosa',
     price: '40',
   ),
-  Menu(
+  ResMenu(
     id: 'item3',
     canteen: ['canteen1', 'canteen4'],
     name: 'Masala Dosa',
     price: '60',
   ),
-  Menu(
+  ResMenu(
     id: 'item4',
     canteen: ['canteen3', 'canteen2'],
     name: 'Tea',
     price: '10',
   ),
-  Menu(
+  ResMenu(
     id: 'item5',
     canteen: [
       'canteen1',
